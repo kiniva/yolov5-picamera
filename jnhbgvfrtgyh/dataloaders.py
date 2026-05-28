@@ -613,7 +613,7 @@ class LoadStreams:
                 time.sleep(0.0)
 
 # ---------------------------------------------------------
-# 以上 Picamera 動態載入邏輯參考自開源專案 https://github.com/ultralytics/yolov5/blob/master/detect.py
+# 以上 Picamera 動態載入邏輯參考自開源專案 https://github.com/ultralytics/yolov5/blob/master/utils/dataloaders.py
 # ---------------------------------------------------------
     def __iter__(self):
         self.count = -1
