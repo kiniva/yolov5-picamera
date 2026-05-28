@@ -450,12 +450,14 @@ def is_raspi_source(s):
     """判斷 source 是否為 Raspberry Pi Camera 識別字串。"""
     return isinstance(s, str) and s.lower() in ("picamera2", "picamera")
 
-
+# ---------------------------------------------------------
+# 以下 Picamera 動態載入邏輯參考自開源專案 https://github.com/ultralytics/yolov5/blob/master/utils/dataloaders.py
+# ---------------------------------------------------------
 class LoadStreams:
     """
-    載入並處理影片串流，支援 YOLOv5 推論。
+    Loads and processes video streams for YOLOv5, supporting various sources including YouTube and IP cameras.
     新增支援：
-      - picamera2  (Raspberry Pi Camera Stack，推薦)
+      - picamera2  (Raspberry Pi Camera Stack)
       - picamera   (Raspberry Pi Camera legacy Stack)
     """
 
@@ -610,7 +612,9 @@ class LoadStreams:
                         cam.open(stream)
                 time.sleep(0.0)
 
-    # ------------------------------------------------------------------ #
+# ---------------------------------------------------------
+# 以上 Picamera 動態載入邏輯參考自開源專案 https://github.com/ultralytics/yolov5/blob/master/detect.py
+# ---------------------------------------------------------
     def __iter__(self):
         self.count = -1
         return self
