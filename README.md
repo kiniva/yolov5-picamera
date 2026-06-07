@@ -1,4 +1,4 @@
-# YOLOv5 客製化修改版本
+# YOLOv5 樹梅派的適配
 
 本專案包含基於 [YOLOv5](https://github.com/ultralytics/yolov5/tree/master)（由 Ultralytics 開發）所修改的檔案。
 
